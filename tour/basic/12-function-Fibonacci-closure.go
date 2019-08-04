@@ -1,0 +1,34 @@
+package main
+
+import "fmt"
+
+// fibonacci is a function that returns
+// a function that returns an int.
+func fibonacci() func() int {
+	curr, next := 0, 1
+	return func() (ret int) {
+		ret = curr
+		curr, next = next, curr+next
+		return
+	}
+}
+
+func main() {
+	f := fibonacci()
+	for i := 0; i < 10; i++ {
+		fmt.Println(f())
+	}
+}
+
+/*
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+*/

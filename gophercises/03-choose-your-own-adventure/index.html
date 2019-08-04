@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Choose Your Own Adventure</title>
+</head>
+
+<body>
+  <h1>Choose a story to begin...</h1>
+  <ul>
+    {{range .}}
+    <li><a href="/story?name={{.}}">{{.}}</a></li>
+    {{end}}
+    <li><a href="">More stories will come soon</a></li>
+  </ul>
+</body>
+
+</html>

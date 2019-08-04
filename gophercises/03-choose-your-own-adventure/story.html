@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Choose Your Own Adventure</title>
+</head>
+
+<body>
+  <h1>{{.Title}}</h1>
+
+  {{range .Paragraphs}}
+  <p>{{.}}</p>
+  {{end}}
+
+  {{if .Options}}
+  <ul>
+    {{range .Options}}
+    <li><a href="javascript:nextArc('{{.Arc}}')">{{.Text}}</a></li>
+    {{end}}
+    {{else}}
+    <h3>The End.</h3>
+    {{end}}
+  </ul>
+
+  <script>
+    function getQueryVariable(variable) {
+      var query = window.location.search.substring(1);
+      var params = query.split("&");
+      for (var i = 0; i < params.length; i++) {
+        var pair = params[i].split("=");
+        if (pair[0] == variable) {
+          return pair[1];
+        }
+      }
+      return (false);
+    }
+
+    function nextArc(arc) {
+      var name = getQueryVariable("name");
+      var url = "/story?name=" + name + "&arc=" + arc;
+      window.location.href = url;
+    }
+  </script>
+</body>
+
+</html>
