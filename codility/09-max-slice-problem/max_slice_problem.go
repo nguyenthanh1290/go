@@ -44,16 +44,20 @@ func max2(A []int) int {
 func max(A []int) int {
 	maxSum := 0
 	sum := 0
+
 	for _, a := range A {
 		if sum+a > 0 {
 			sum += a
+
 		} else {
 			sum = 0
 		}
+
 		if sum > maxSum {
 			maxSum = sum
 		}
 	}
+
 	return maxSum
 }
 
