@@ -12,7 +12,7 @@ func fib(n int) int {
 }
 
 // Time complexity: O(2^n)
-// Space complexity: O(1)
+// Space complexity: O(n)
 func recursion(n int) int {
 	var result int
 
