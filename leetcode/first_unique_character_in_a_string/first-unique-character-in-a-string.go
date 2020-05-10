@@ -1,7 +1,7 @@
 package string
 
-// Time complexity : {O}(N)
-// Space complexity : {O}(1)
+// Time complexity : O(N)
+// Space complexity : O(1)
 func firstUniqChar(s string) int {
 	count := make(map[rune]int)
 
