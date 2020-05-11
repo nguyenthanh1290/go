@@ -3,6 +3,8 @@
 https://leetcode.com/problems/find-the-town-judge/
 https://leetcode.com/submissions/detail/337191148/?from=/explore/featured/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3325/
 
+https://www.youtube.com/watch?v=B9pdMLTFo1E
+
 ## Description
 
 In a town, there are N people labelled from 1 to N.  There is a rumor that one of these people is secretly the town judge.
