@@ -27,3 +27,5 @@ func bstFromPreorder(preorder []int) *TreeNode {
 		Right: bstFromPreorder(preorder[right:]),
 	}
 }
+
+// tags: tree
